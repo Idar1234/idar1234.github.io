@@ -1,0 +1,215 @@
+main {
+	display: flex;
+	flex-wrap: nowrap;
+	height: -webkit-fill-available;
+	max-height: 100vh;
+	overflow: auto;
+	overflow-y: hidden;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+.background {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(images/wol.JPG);
+	background-size: cover;
+	background-position: center;
+}
+
+.navbar {
+	width: 100%;
+	margin: auto;
+	padding: 40px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #390224;
+}
+
+.logo {
+	width: 120px;
+	font-size: 48px;
+	color: white;
+}
+
+.navbar ul li {
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+
+.navbar ul li a {
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+}
+
+.navbar ul li::after{
+	content: '';
+	height: 3px;
+	width: 0%;
+	background: #D7BDE2;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.5s;
+ }
+
+ .navbar ul li:hover::after {
+ 	width: 100%;
+ }
+
+.sidebar{
+	position: fixed;
+	left: 0px;
+	width: 250px;
+	height: 100%;
+	background: #390224;
+	transition: all 0.8s ease;
+}
+
+.sidebar .top {
+	font-size: 22px;
+	color: black;
+	text-align: center;
+	line-height: 70px;
+	background: #D7BDE2;
+}
+
+.sidebar ul a {
+	display: block;
+	height: 100%;
+	width: 100%;
+	line-height: 65px;
+	font-size: 20px;
+	color: white;
+	padding-left: 30px;
+	box-sizing: border-box;
+	border-top: 1px solid rgba(255,255,255, 0.1);
+	border-bottom: 1px solid black; 
+	transition: all 0.4s ease;
+}
+
+ ul li:hover a{
+	padding-left: 100px;
+	background: #D7BDE2;
+}
+
+#check {
+	display: none;
+}
+
+label #btn {
+	position: absolute;
+	cursor: pointer;
+	background: white;
+	border-radius: 3px;
+}
+
+label #open {
+	position: absolute;
+	cursor: pointer;
+	background: #D7BDE2;
+	border-radius: 1px;
+	font-size: 30px;
+}
+
+label #open {
+	left: 0;
+	top: 10;
+	font-size: 30px;
+	color: rgb(255, 255, 255);
+	padding: 6px 12px;
+	transition: all 0.5s ease;
+}
+
+label #btn {
+	margin-top: 130px;
+	z-index: 1111;
+	left: 195px;
+	top: 25px;
+	font-size: 20px;
+	color: black;
+	padding: 4px 9px;
+	transition: all 0.5s ease;
+}
+
+#check:checked~.sidebar {
+	left: -250px;
+}
+
+#check:checked~label #open {
+	left: 50px;
+	font-size: 20px;
+}
+
+#check:checked~label #btn {
+	left: -180px;
+}
+
+.content {
+	width: 100%;
+	top: 40%;
+	position: absolute;
+	color: white;
+	text-align: center;
+	transform: none;
+}
+
+.content h1 {
+	font-size: 70px;
+	margin-top: 80px;
+}
+
+.content p {
+	margin: 20px auto;
+	font-weight: 100;
+	line-height: 25px;
+
+}
+
+.promosi h1{
+	font-size: 50px;
+	border: 3px solid #D7BDE2;
+	color: #D7BDE2;
+	text-align: center;
+
+}
+
+.promosi img {
+	width: 700px;
+	display: flex;
+	left: 30%;
+	padding-top: 5%;
+}
+
+footer{
+	background: #D7BDE2;
+	height: auto;
+	width: 100vw;
+	font-family: sans-serif;
+	padding-top: 20px;
+	color: black;
+}
+
+.footer-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.footer-content h2 {
+	font-size: 1.8rem;
+	font-weight: 400;
+	text-transform: capitalize;
+	line-height: 3rem;
+}
+
+
